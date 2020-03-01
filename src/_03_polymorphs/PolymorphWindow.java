@@ -21,7 +21,7 @@ public class PolymorphWindow extends JPanel implements ActionListener{
     
     public static void main(String[] args) {
    	 new PolymorphWindow().buildWindow();
-    }
+    }s
     
     public void buildWindow(){
    	 window = new JFrame("IT'S MORPHIN' TIME!");
