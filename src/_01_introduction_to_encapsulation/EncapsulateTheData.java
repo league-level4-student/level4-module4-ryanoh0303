@@ -30,7 +30,7 @@ public class EncapsulateTheData {
 	private Object memberObj;  //must not be a String.  If it is a String, set it equal to a new Object();
 	
 	public static void main(String[] args) {
-		a
+		
 	}
 	public int getitemsReceived() {
 		return itemsReceived;
