@@ -15,8 +15,11 @@ public class BluePolymorph extends Polymorph{
 	public void draw(Graphics g) {
 		height = getHeight();
 		width = getWidth();
-		g.setColor(Color.blue);
+		g.setColor(Color.BLUE);
 		g.fillRect(x, y, height, width);
+	}
+	public void update() {
+
 	}
 	
 }
