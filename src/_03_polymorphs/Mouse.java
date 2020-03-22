@@ -13,8 +13,10 @@ public class Mouse extends Polymorph {
 	public void draw(Graphics g) {
 		g.setColor(Color.YELLOW);
 		g.fillRect(x, y, width, height);
+		
 	}
 	public void update() {
+		
 		
 	}
 
