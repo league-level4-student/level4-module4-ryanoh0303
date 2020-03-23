@@ -1,17 +1,35 @@
 package _04_hospital;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class Doctor extends GeneralPractitioner{
+public class Doctor extends Hospital{
+	ArrayList<Patient> arr = new ArrayList<>();
+	boolean care = false;
 
-	public List<Doctor> getPatients() {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean performsSurgery() {
+		return false;
 	}
 
-	public Object performsSurgery() {
-		// TODO Auto-generated method stub
-		return null;
+	public void assignPatient(Patient patient) {
+		arr.add(patient);
+
 	}
+	public void doMedicine() {
+		System.out.println("DOCTOR");
+		care = true;
+		//System.out.println("AFTER MEDICINE :"+care);
+	}
+
+
+	public boolean makesHouseCalls() {
+		return false;
+	}
+
+	
+	
+	
+	
+
+
 
 }

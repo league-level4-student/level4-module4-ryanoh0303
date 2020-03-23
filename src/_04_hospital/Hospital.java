@@ -1,34 +1,34 @@
 package _04_hospital;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Hospital {
 
-
-
+	ArrayList<Doctor> doctor = new ArrayList<>();
+	ArrayList<Patient> patient = new ArrayList<>();
 	public void assignPatientsToDoctors() {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
-	public void addPatient(Patient patient) {
-		// TODO Auto-generated method stub
+	public void addPatient(Patient pat) {
+		patient.add(pat);
 		
 	}
 
-	public void addDoctor(GeneralPractitioner generalPractitioner) {
-		// TODO Auto-generated method stub
+
+	public ArrayList<Patient> getPatients() {
+		return patient;
+	}
+
+	public ArrayList<Doctor> getDoctors() {
+		return doctor;
+	}
+
+	public void addDoctor(Doctor doc) {
+		doctor.add(doc);
 		
-	}
-
-	public List<Doctor> getPatients() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Doctor> getDoctors() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	
