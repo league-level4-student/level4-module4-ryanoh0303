@@ -56,7 +56,7 @@ public class EncapsulateTheData {
 		return nomenclature;
 	}
 	public void setNomenclature(String x)  throws Exception{
-		if(x.length()==0) {
+		if(x.length()!=0) {
 			throw new Exception();
 		}
 		else {

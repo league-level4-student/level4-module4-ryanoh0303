@@ -9,11 +9,7 @@ public class Patient extends Doctor{
 	public void checkPulse() {
 		care = true;
 	}
-	public void doMedicine() {
-		System.out.println("Patient");
-		care = true;
-	}
-	
+		
 
 
 
