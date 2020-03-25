@@ -15,7 +15,7 @@ public class Mouse extends Polymorph {
 		g.fillRect(x, y, width, height);
 		
 	}
-	public void update() {
+	public void update(int x, int y) {
 		
 		
 	}

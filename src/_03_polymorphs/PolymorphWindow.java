@@ -10,6 +10,7 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -42,6 +43,9 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
    	 arr.add(new RedMorph(50,50,100,100));
    	 arr.add(new Circle(250,20, 50,50));
    	 arr.add(new MovingMorph(50,50,100,100));
+   	arr.add(new Mouse(50,50,50,50));
+	arr.add(new MessagePolymorph(200,50,50,50));
+	arr.add(new PictureMorph(200,250,25,50));
    	 //arr.add(new BluePolymorph(50,300,200,200));
    	 timer = new Timer(1000 / 30, this);
    	 timer.start();                   
@@ -66,32 +70,58 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
    	 repaint();
    //	 bluePoly.update();
    	 for(int i=0; i<arr.size(); i++) {
-   		 arr.get(i).update();
+   		 if(arr.get(i) instanceof Mouse) {
+   		 }
+   		 else {
+   			arr.get(i).update();
+   		 }
+   		 
    	 }
+   	
 
     }
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		 for(int i=0; i<arr.size(); i++) {
+	   		 if(arr.get(i) instanceof Mouse){
+	   			 System.out.println("WORKING");
+	   			int x = e.getX();
+	   			int y = e.getY();
+	   		    arr.get(i).setX(x);
+	   		    arr.get(i).setY(y-15);
+	   			
+	   		 }
+	   		 if(arr.get(i) instanceof MessagePolymorph) {
+	   			 if(e.getX()<arr.get(i).getX()+100 && arr.get(i).getX()-100<e.getX()  &&  e.getY() <arr.get(i).getY()+100 && arr.get(i).getY()-100<e.getY()) {
+	   				 System.out.println("ACCUrate");
+	   				 JOptionPane.showMessageDialog(null, "ACCURATE");
+	   			 }
+	   		 }
+	   		 else {
+	   			
+	   		 }
+	   		 
+	   	 }
+	   	
+		
 		
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
+		
 		
 	}
 
